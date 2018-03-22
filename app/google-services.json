@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "578991897214",
+    "firebase_url": "https://fellowship-1.firebaseio.com",
+    "project_id": "fellowship-1",
+    "storage_bucket": "fellowship-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578991897214:android:9754ae3aca375b8e",
+        "android_client_info": {
+          "package_name": "com.teamawesome.fellowship"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578991897214-v0bejr2sl8qurceo22c2asongjvmlv4b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCT3-1TmEimF24XewKK2VX_h25V2KQAijk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
