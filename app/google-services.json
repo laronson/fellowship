@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "578991897214",
-    "firebase_url": "https://fellowship-1.firebaseio.com",
-    "project_id": "fellowship-1",
-    "storage_bucket": "fellowship-1.appspot.com"
+    "project_number": "790536290071",
+    "firebase_url": "https://fellowship-10.firebaseio.com",
+    "project_id": "fellowship-10",
+    "storage_bucket": "fellowship-10.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:578991897214:android:9754ae3aca375b8e",
+        "mobilesdk_app_id": "1:790536290071:android:5d8bfdeb5081b810",
         "android_client_info": {
-          "package_name": "com.teamawesome.fellowship"
+          "package_name": "com.TeamAwesome.fellowship"
         }
       },
       "oauth_client": [
         {
-          "client_id": "578991897214-v0bejr2sl8qurceo22c2asongjvmlv4b.apps.googleusercontent.com",
+          "client_id": "790536290071-6vdoctj4vo7e680cr23gaotch4jn90i1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCT3-1TmEimF24XewKK2VX_h25V2KQAijk"
+          "current_key": "AIzaSyAPzYYFJsdgrUIoI35H_e7hh7lK9MsP_do"
         }
       ],
       "services": {
