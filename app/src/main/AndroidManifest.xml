@@ -22,7 +22,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".MainPageFeedFragment" />
-        <activity android:name=".MainPageInitiativesFragment"></activity>
+        <activity android:name=".MainPageInitiativesFragment" />
+        <activity android:name=".CreateInitiativeActivity"></activity>
     </application>
 
 </manifest>
