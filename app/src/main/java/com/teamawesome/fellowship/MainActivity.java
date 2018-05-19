@@ -2,6 +2,7 @@ package com.teamawesome.fellowship;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.drawer_layout) DrawerLayout _drawer_layout;
     @BindView(R.id.nav_view) NavigationView _nav_view;
     @BindView(R.id.toolbar) Toolbar _toolbar;
+    @BindView(R.id.fab) FloatingActionButton _fab;
 
     /**
      * The number of pages (wizard steps) to show in this demo.
@@ -110,6 +113,16 @@ public class MainActivity extends AppCompatActivity {
             userName = extras.getString("USER");
             Log.d("BLAH", userName);
         }
+
+        // Set onClick for the floating action button.
+        _fab.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                goToCreateInitiative(v);
+            }
+        });
+
     }
 
     @Override
@@ -134,6 +147,11 @@ public class MainActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void goToCreateInitiative(View v) {
+        Intent i = new Intent(this, CreateInitiativeActivity.class);
+        startActivity(i);
     }
 
 
