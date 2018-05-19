@@ -117,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
 
     protected  void switchToMainPage(FirebaseUser user) {
         Intent switchToMain = new Intent(this, MainActivity.class);
-        switchToMain.putExtra("USER", user.toString());
+        switchToMain.putExtra("USER", user.getEmail());
         startActivity(switchToMain);
     }
 
