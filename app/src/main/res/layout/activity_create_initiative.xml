@@ -5,9 +5,13 @@
     android:fitsSystemWindows="true">
 
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -21,5 +25,5 @@
                 android:hint="Name" />
         </android.support.design.widget.TextInputLayout>
 
-    </RelativeLayout>
+    </LinearLayout>
 </ScrollView>
