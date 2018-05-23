@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">fellowship</string>
     <string name="action_settings">Settings</string>
+    <string name="startDate">Start Date</string>
+    <string name="to">To</string>
+    <string name="endDate">End Date</string>
 </resources>

@@ -23,7 +23,8 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".MainPageFeedFragment" />
         <activity android:name=".MainPageInitiativesFragment" />
-        <activity android:name=".CreateInitiativeActivity"></activity>
+        <activity android:name=".CreateInitiativeActivity" />
+        <activity android:name=".DatePickerFragment" />
     </application>
 
 </manifest>
