@@ -1,7 +1,19 @@
 <resources>
     <string name="app_name">fellowship</string>
     <string name="action_settings">Settings</string>
+    <string name="title_of_initiative">Title of Initiative</string>
+    <string name="title_instruction">Be Descriptive You Idiot</string>
+    <string name="interval_prompt">How often will you check in?</string>
+    <string name="create_initiative">Create Your Initiative!</string>
+
     <string name="startDate">Start Date</string>
     <string name="to">To</string>
     <string name="endDate">End Date</string>
+
+    <string-array name="intervals_array">
+        <item>Once a Week</item>
+        <item>Twice a Week</item>
+        <item>Once a Month</item>
+        <item>Twice a Month</item>
+    </string-array>
 </resources>
