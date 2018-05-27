@@ -23,7 +23,7 @@ public class CreateInitiativeActivity extends AppCompatActivity {
 
     @BindView(R.id.input_initiativeTitle) EditText _initiativeTitle;
     @BindView(R.id.startDate) EditText _startDate;
-    @BindView(R.id.startDate) EditText _endDate;
+    @BindView(R.id.endDate) EditText _endDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class CreateInitiativeActivity extends AppCompatActivity {
 
     public void showEndDatePickerDialog(View v) {
         DialogFragment newFragment = new DatePickerFragment(_endDate);
-        newFragment.show(getSupportFragmentManager(), "datePicker");
+        newFragment.show(getSupportFragmentManager(), "datePicker2");
     }
 
 }

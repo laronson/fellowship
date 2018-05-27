@@ -48,7 +48,6 @@
 
         <EditText
             android:id="@+id/startDate"
-            android:layout_below="@+id/name_text_input_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -61,12 +60,10 @@
             android:id="@+id/to"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/name_text_input_layout"
             android:layout_toEndOf="@+id/startDate"
             android:text="@string/to"/>
         <EditText
-            android:id="@+id/EndDate"
-            android:layout_below="@+id/name_text_input_layout"
+            android:id="@+id/endDate"
             android:layout_toEndOf="@+id/to"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
