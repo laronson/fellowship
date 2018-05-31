@@ -1,20 +1,10 @@
 package com.teamawesome.fellowship;
 
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.EditText;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import android.view.View;
 import android.widget.EditText;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,6 +14,7 @@ public class CreateInitiativeActivity extends AppCompatActivity {
     @BindView(R.id.input_initiativeTitle) EditText _initiativeTitle;
     @BindView(R.id.startDate) EditText _startDate;
     @BindView(R.id.endDate) EditText _endDate;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

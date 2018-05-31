@@ -14,6 +14,7 @@ public class TextFocusChangeListener implements View.OnFocusChangeListener {
     public TextFocusChangeListener(String defaultString, EditText editText) {
         this.defaultString = defaultString;
         this.editText = editText;
+        editText.setText(this.defaultString);
     }
 
     public void onFocusChange(View v, boolean hasFocus) {

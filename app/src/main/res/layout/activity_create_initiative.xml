@@ -20,15 +20,23 @@
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/editedship" />
+            app:srcCompat="@drawable/editedship"
+            />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/create_initiative_page_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/create_initiative"
             android:textSize="32dp" />
+
+        <!-- Used as dummy view to set focus off of first Text Field -->
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -42,9 +50,6 @@
                 android:layout_height="wrap_content" />
 
         </android.support.design.widget.TextInputLayout>
-
-
-
 
         <EditText
             android:id="@+id/startDate"
