@@ -45,35 +45,38 @@
 
 
 
-
-        <EditText
-            android:id="@+id/startDate"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:focusable="false"
-            android:inputType="date"
-            android:onClick="showStartDatePickerDialog"
-            android:text="@string/startDate" />
-        <TextView
-            android:id="@+id/to"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/startDate"
-            android:text="@string/to"/>
-        <EditText
-            android:id="@+id/endDate"
-            android:layout_toEndOf="@+id/to"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:focusable="false"
-            android:inputType="date"
-            android:onClick="showEndDatePickerDialog"
-            android:text="@string/endDate" />
-
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/startDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="date"
+                android:onClick="showStartDatePickerDialog"
+                android:text="@string/startDate" />
+            <TextView
+                android:id="@+id/to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/to"/>
+            <EditText
+                android:id="@+id/endDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="date"
+                android:onClick="showEndDatePickerDialog"
+                android:text="@string/endDate" />
+        </LinearLayout>
 
 
 
