@@ -1,5 +1,6 @@
 package com.teamawesome.fellowship;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
@@ -14,12 +15,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-
-import java.text.DateFormat;
-import java.text.ParseException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -93,6 +93,9 @@ public class CreateInitiativeActivity extends AppCompatActivity {
 
         DocumentReference mDocRef = fireStore.document("initiatives/" + _initiativeTitle.getText().toString());
         mDocRef.set(initiativeData);
+
+        Intent i = new Intent(this, InitiativeActivity.class);
+        startActivity(i);
 
     }
 
