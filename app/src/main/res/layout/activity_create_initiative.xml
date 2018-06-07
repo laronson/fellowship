@@ -119,15 +119,12 @@
                 android:id="@+id/group_size_title"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@string/task_interval"
-                tools:text="@string/group_size" />
+                android:text="@string/group_size" />
 
             <Spinner
                 android:id="@+id/spinner_groupsize"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/intervals_array"
-                android:prompt="@string/interval_prompt" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
