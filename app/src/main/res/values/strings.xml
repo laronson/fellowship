@@ -19,4 +19,6 @@
 
     <string name="open_group">Open Group</string>
     <string name="closed_group">Closed Group</string>
+
+    <string name="submit_initiative">Submit Your Initiative</string>
 </resources>

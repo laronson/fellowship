@@ -12,6 +12,9 @@ import butterknife.ButterKnife;
 import android.view.View;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -20,6 +23,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class CreateInitiativeActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore fireStore = FirebaseFirestore.getInstance();
+    private static final String TAG = "EmailPassword";
 
     @BindView(R.id.input_initiativeTitle) EditText _initiativeTitle;
     @BindView(R.id.startDate) EditText _startDate;
@@ -30,6 +36,7 @@ public class CreateInitiativeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_initiative);
         ButterKnife.bind(this);
+        mAuth = FirebaseAuth.getInstance();
 
         _initiativeTitle.setOnFocusChangeListener(new TextFocusChangeListener(getString(R.string.title_instruction), _initiativeTitle));
     }
@@ -44,4 +51,7 @@ public class CreateInitiativeActivity extends AppCompatActivity {
         newFragment.show(getSupportFragmentManager(), "datePicker2");
     }
 
+    public void onSubmit(View v) {
+
+    }
 }

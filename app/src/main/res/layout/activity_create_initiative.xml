@@ -105,7 +105,13 @@
                 android:text="@string/closed_group"/>
         </RadioGroup>
 
-
+        <Button
+            android:id="@+id/submit_initiative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_initiative"
+            android:onClick="onSubmit"
+        />
 
     </LinearLayout>
 
