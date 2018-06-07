@@ -26,6 +26,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_vertical_margin"
             android:gravity="center"
             android:text="@string/create_initiative"
             android:textSize="32dp" />
@@ -40,8 +41,8 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="@dimen/default_vertical_margin"
+            >
 
             <EditText
                 android:id="@+id/input_initiativeTitle"
@@ -55,12 +56,13 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_vertical_margin"
             android:orientation="horizontal">
             <EditText
                 android:id="@+id/startDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="@dimen/default_horizontal_margin"
                 android:layout_weight="1"
                 android:ems="10"
                 android:focusable="false"
@@ -71,7 +73,7 @@
                 android:id="@+id/to"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="@dimen/default_horizontal_margin"
                 android:text="@string/to"/>
             <EditText
                 android:id="@+id/endDate"
@@ -91,10 +93,24 @@
             android:id="@+id/spinner_taskInterval"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_vertical_margin"
             android:entries="@array/intervals_array"
             android:prompt="@string/interval_prompt" />
 
-
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_vertical_margin"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_group"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/closed_group"/>
+        </RadioGroup>
 
 
 

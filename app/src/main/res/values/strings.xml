@@ -16,4 +16,7 @@
         <item>Once a Month</item>
         <item>Twice a Month</item>
     </string-array>
+
+    <string name="open_group">Open Group</string>
+    <string name="closed_group">Closed Group</string>
 </resources>
