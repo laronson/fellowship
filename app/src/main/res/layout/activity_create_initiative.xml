@@ -134,7 +134,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/default_vertical_margin"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:checkedButton="@id/open_group_radio_button">
             <RadioButton
                 android:id="@+id/open_group_radio_button"
                 android:layout_width="wrap_content"

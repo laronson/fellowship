@@ -18,13 +18,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class CreateInitiativeActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseFirestore fireStore = FirebaseFirestore.getInstance();
-    private static final String TAG = "EmailPassword";
 
     @BindView(R.id.input_initiativeTitle) EditText _initiativeTitle;
     @BindView(R.id.startDate) EditText _startDate;
@@ -95,7 +97,50 @@ public class CreateInitiativeActivity extends AppCompatActivity {
     }
 
     public boolean validate() {
-        return true;
+        boolean valid = true;
+        String initiativeTitle = _initiativeTitle.getText().toString();
+        String startDateStr = _startDate.getText().toString();
+        String endDateStr = _endDate.getText().toString();
+
+        DateFormat sdf = new SimpleDateFormat("MM/dd/yy");
+        Date now = new Date();
+
+        // TODO: also check that initiative title isn't already taken
+        if (initiativeTitle.isEmpty()) {
+            _initiativeTitle.setError("enter an initiative title");
+            valid = false;
+        } else {
+            _initiativeTitle.setError(null);
+        }
+
+        Date startDate = null;
+        try {
+            startDate = sdf.parse(startDateStr);
+            if (startDate.compareTo(now) < 0) {
+                _startDate.setError("Start date cannot be before the current date.");
+                valid = false;
+            } else {
+                _startDate.setError(null);
+            }
+        } catch (ParseException e) {
+            _startDate.setError("select a start date");
+            valid = false;
+        }
+
+        try {
+            Date endDate = sdf.parse(endDateStr);
+            if (startDate != null && endDate.before(startDate)) {
+                _endDate.setError("End date cannot be before start date.");
+                valid = false;
+            } else {
+                _endDate.setError(null);
+            }
+        } catch (ParseException e) {
+            _endDate.setError("select an end date");
+            valid = false;
+        }
+
+        return valid;
     }
 
     public void onSubmitFailed() {
