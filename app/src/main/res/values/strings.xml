@@ -9,6 +9,8 @@
     <string name="startDate">Start Date</string>
     <string name="to">To</string>
     <string name="endDate">End Date</string>
+    <string name="task_interval">Task Interval:</string>
+    <string name="group_size">Group Size:</string>
 
     <string-array name="intervals_array">
         <item>Once a Week</item>
@@ -21,4 +23,5 @@
     <string name="closed_group">Closed Group</string>
 
     <string name="submit_initiative">Submit Your Initiative</string>
+
 </resources>

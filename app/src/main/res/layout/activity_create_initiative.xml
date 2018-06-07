@@ -29,7 +29,14 @@
             android:layout_marginBottom="@dimen/default_vertical_margin"
             android:gravity="center"
             android:text="@string/create_initiative"
-            android:textSize="32dp" />
+            android:textSize="32sp" />
+
+        <!-- Used as dummy view to set focus off of first Text Field -->
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -81,23 +88,56 @@
         </LinearLayout>
 
 
-
-        <Spinner
-            android:id="@+id/spinner_taskInterval"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/default_vertical_margin"
-            android:entries="@array/intervals_array"
-            android:prompt="@string/interval_prompt" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/interval_task_title"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/task_interval" />
+
+            <Spinner
+                android:id="@+id/spinner_taskInterval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/intervals_array"
+                android:prompt="@string/interval_prompt" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_vertical_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/group_size_title"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/group_size" />
+
+            <Spinner
+                android:id="@+id/spinner_groupsize"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
 
         <RadioGroup
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/default_vertical_margin"
             android:orientation="horizontal">
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
                 android:text="@string/open_group"/>
             <RadioButton
                 android:layout_width="wrap_content"
