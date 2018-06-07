@@ -13,6 +13,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import butterknife.BindView;
@@ -27,6 +29,8 @@ public class CreateInitiativeActivity extends AppCompatActivity {
     @BindView(R.id.startDate) EditText _startDate;
     @BindView(R.id.endDate) EditText _endDate;
     @BindView(R.id.spinner_groupsize) Spinner _groupSizeSpinner;
+    @BindView(R.id.interval_task_title) Spinner _taskIntervalSpinner;
+    @BindView(R.id.open_closed_group) RadioGroup _openClosedGroup;
 
 
     @Override
@@ -54,6 +58,17 @@ public class CreateInitiativeActivity extends AppCompatActivity {
     }
 
     public void onSubmit(View v) {
+        if (!validate()) {
+            onSubmitFailed();
+            return;
+        }
+    }
+
+    public boolean validate() {
+        return true;
+    }
+
+    public void onSubmitFailed() {
 
     }
 }
