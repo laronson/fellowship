@@ -24,6 +24,9 @@
 
     <string name="submit_initiative">Submit Your Initiative</string>
 
+    <string name="starts_in">Starts in</string>
+    <string name="time_remaining">Time remaining</string>
+
     <string name="days">days</string>
     <string name="hours">hours</string>
     <string name="minutes">minutes</string>

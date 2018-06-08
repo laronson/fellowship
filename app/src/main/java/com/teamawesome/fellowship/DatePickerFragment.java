@@ -43,9 +43,8 @@ public class DatePickerFragment extends DialogFragment
         c.set(Calendar.YEAR, year);
         c.set(Calendar.MONTH, month);
         c.set(Calendar.DAY_OF_MONTH, day);
-        String myFormat = "MM/dd/yy"; //In which you need put here
+        String myFormat = "MM/dd/yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
-        //EditText startDate = ((CreateInitiativeActivity) getActivity()).getStartDateField();
         dateField.setText(sdf.format(c.getTime()));
     }
 
