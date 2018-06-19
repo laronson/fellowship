@@ -102,8 +102,10 @@ public class MainActivity extends AppCompatActivity {
                         // close drawer when item is tapped
                         _drawer_layout.closeDrawers();
 
-                        // Add code here to update the UI based on the item selected
-                        // For example, swap UI fragments here
+                        switch(menuItem.getItemId()) {
+                            case R.id.initiative_seach:
+                                switchActivity(InitiativeSearchActivity.class);
+                        }
 
                         return true;
                     }
@@ -186,5 +188,10 @@ public class MainActivity extends AppCompatActivity {
                     return null;
             }
         }
+    }
+
+    public void switchActivity(Class switchToClass) {
+        Intent i = new Intent(this, switchToClass);
+        startActivity(i);
     }
 }

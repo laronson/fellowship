@@ -25,7 +25,8 @@
         <activity android:name=".MainPageInitiativesFragment" />
         <activity android:name=".CreateInitiativeActivity" />
         <activity android:name=".DatePickerFragment" />
-        <activity android:name=".InitiativeActivity"></activity>
+        <activity android:name=".InitiativeActivity" />
+        <activity android:name=".InitiativeSearchActivity"></activity>
     </application>
 
 </manifest>
