@@ -11,7 +11,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -95,12 +97,13 @@ public class CreateInitiativeActivity extends AppCompatActivity {
         String uuid = UUID.randomUUID().toString();
         initiativeData.put("uuid", uuid);
 
-        DocumentReference mDocRef = fireStore.document("initiatives/" + uuid);
-        mDocRef.set(initiativeData);
-
-        Intent i = new Intent(this, InitiativeActivity.class);
-        i.putExtra(InitiativeActivity.INITIATIVE_ID_PARAM, uuid);
-        startActivity(i);
+        CollectionReference cr = fireStore.collection("initiatives");
+        cr.add(initiativeData).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+                switchToInitiativePage(documentReference.getId());
+            }
+        });
 
     }
 
@@ -149,6 +152,12 @@ public class CreateInitiativeActivity extends AppCompatActivity {
         }
 
         return valid;
+    }
+
+    public void switchToInitiativePage(String uuid) {
+        Intent i = new Intent(this, InitiativeActivity.class);
+        i.putExtra(InitiativeActivity.INITIATIVE_ID_PARAM, uuid);
+        startActivity(i);
     }
 
     public void onSubmitFailed() {
