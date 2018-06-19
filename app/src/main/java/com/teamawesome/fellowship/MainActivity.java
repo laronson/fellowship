@@ -109,11 +109,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        if(extras != null) {
-            userName = extras.getString("USER");
-            Log.d("BLAH", userName);
-        }
-
         // Set onClick for the floating action button.
         _fab.setOnClickListener(new View.OnClickListener() {
 
@@ -132,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d("BLAJ", "HERE WE ARE");
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser == null) {
-            Log.d("BLAJ", "FUCK");
             Intent switchToLogin = new Intent(this, LoginActivity.class);
             startActivity(switchToLogin);
         }

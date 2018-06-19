@@ -1,7 +1,9 @@
 package com.teamawesome.fellowship;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +24,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity {
+    private static final String PREFS_FILE = "MyPreferences";
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
     private FirebaseAuth mAuth;
@@ -90,6 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            writeUserIdToSharedPreferences(user);
                             switchToMainPage(user);
                         } else {
                             // If sign in fails, display a message to the user.
@@ -114,10 +118,18 @@ public class LoginActivity extends AppCompatActivity {
                 }, 3000);
     }
 
+    private void writeUserIdToSharedPreferences(FirebaseUser user) {
+        String uid = user.getUid();
+        SharedPreferences sharedPreferences = getSharedPreferences(
+                PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("userId", uid);
+        editor.commit();
+    }
+
 
     protected  void switchToMainPage(FirebaseUser user) {
         Intent switchToMain = new Intent(this, MainActivity.class);
-        switchToMain.putExtra("USER", user.getEmail());
         startActivity(switchToMain);
     }
 
