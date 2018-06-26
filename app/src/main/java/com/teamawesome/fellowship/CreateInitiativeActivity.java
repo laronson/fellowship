@@ -39,7 +39,7 @@ public class CreateInitiativeActivity extends AppCompatActivity {
     @BindView(R.id.open_closed_group) RadioGroup _openClosedGroup;
     @BindView(R.id.input_initiativeDescription) EditText _initiativeDescription;
 
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class CreateInitiativeActivity extends AppCompatActivity {
         ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(this,android.R.layout.simple_spinner_item, items);
         _groupSizeSpinner.setAdapter(adapter);
 
-        _initiativeTitle.setOnFocusChangeListener(new TextFocusChangeListener(getString(R.string.title_instruction), _initiativeTitle));
+        //_initiativeTitle.setOnFocusChangeListener(new TextFocusChangeListener(getString(R.string.title_instruction), _initiativeTitle));
     }
 
     public void showStartDatePickerDialog(View v) {
