@@ -37,6 +37,7 @@ public class CreateInitiativeActivity extends AppCompatActivity {
     @BindView(R.id.spinner_groupsize) Spinner _groupSizeSpinner;
     @BindView(R.id.spinner_taskInterval) Spinner _taskIntervalSpinner;
     @BindView(R.id.open_closed_group) RadioGroup _openClosedGroup;
+    @BindView(R.id.input_initiativeDescription) EditText _initiativeDescription;
 
 
     @Override
@@ -87,7 +88,7 @@ public class CreateInitiativeActivity extends AppCompatActivity {
         }
 
         initiativeData.put("title", _initiativeTitle.getText().toString());
-        initiativeData.put("description", "default for now");
+        initiativeData.put("description", _initiativeDescription.getText().toString());
         initiativeData.put("startDate", startDate);
         initiativeData.put("endDate", endDate);
         initiativeData.put("taskInterval", _taskIntervalSpinner.getSelectedItem().toString());
