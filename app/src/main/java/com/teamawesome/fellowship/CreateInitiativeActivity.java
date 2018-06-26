@@ -39,6 +39,7 @@ public class CreateInitiativeActivity extends AppCompatActivity {
     @BindView(R.id.open_closed_group) RadioGroup _openClosedGroup;
     @BindView(R.id.input_initiativeDescription) EditText _initiativeDescription;
 
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
